@@ -1,0 +1,654 @@
+{
+  "metadata": {
+    "repository": "awesome-chatgpt-codex-auth",
+    "title": "Awesome ChatGPT/Codex Auth",
+    "description": "A curated index of developer tools that authenticate through ChatGPT, Codex OAuth, Codex app-server auth, or a local Codex sign-in instead of requiring a separate OpenAI Platform API key.",
+    "generated_from": "data/projects.json",
+    "project_count": 32,
+    "last_verified": {
+      "earliest": "2026-06-02",
+      "latest": "2026-06-02"
+    },
+    "categories": [
+      {
+        "id": "official-platform",
+        "label": "Official OpenAI and platform integrations",
+        "count": 5
+      },
+      {
+        "id": "editors-agents",
+        "label": "Editors, IDEs, and coding agents",
+        "count": 11
+      },
+      {
+        "id": "remote-control",
+        "label": "Remote control and orchestration",
+        "count": 1
+      },
+      {
+        "id": "plugins-adapters",
+        "label": "Plugins, adapters, and companion CLIs",
+        "count": 9
+      },
+      {
+        "id": "proxies-api-shims",
+        "label": "OpenAI-compatible local APIs and proxies",
+        "count": 6
+      }
+    ],
+    "statuses": [
+      {
+        "id": "official",
+        "label": "🟢 Official / first-party",
+        "count": 5
+      },
+      {
+        "id": "documented-third-party",
+        "label": "🔵 Documented third-party integration",
+        "count": 11
+      },
+      {
+        "id": "experimental-adapter",
+        "label": "🟡 Experimental adapter or plugin",
+        "count": 10
+      },
+      {
+        "id": "experimental-proxy",
+        "label": "🟠 Experimental proxy or API shim",
+        "count": 5
+      },
+      {
+        "id": "high-risk",
+        "label": "⚠️ High-risk / verify terms and security",
+        "count": 1
+      }
+    ]
+  },
+  "projects": [
+    {
+      "name": "OpenAI Codex",
+      "slug": "openai-codex",
+      "category": "official-platform",
+      "status": "official",
+      "auth": [
+        "Sign in with ChatGPT",
+        "OpenAI API key"
+      ],
+      "subscription_auth_support": "Codex can be used through ChatGPT subscription access on supported ChatGPT plans, or with API-key billing.",
+      "description": "OpenAI coding agent available as CLI, IDE integrations, web, desktop, and cloud tasks.",
+      "url": "https://github.com/openai/codex",
+      "docs": [
+        "https://developers.openai.com/codex/auth",
+        "https://developers.openai.com/codex/cli"
+      ],
+      "notes": "Use this as the baseline reference for what “ChatGPT subscription auth” means in the Codex ecosystem.",
+      "last_verified": "2026-06-02"
+    },
+    {
+      "name": "Codex App Server",
+      "slug": "codex-app-server",
+      "category": "official-platform",
+      "status": "official",
+      "auth": [
+        "ChatGPT managed auth",
+        "Device-code auth",
+        "OpenAI API key"
+      ],
+      "subscription_auth_support": "Provides local agent runtime/app-server primitives that can authenticate through ChatGPT-managed auth modes.",
+      "description": "Protocol/runtime used by apps to run Codex-backed coding agents with managed authentication, tools, and events.",
+      "url": "https://developers.openai.com/codex/app-server",
+      "docs": [
+        "https://developers.openai.com/codex/app-server"
+      ],
+      "notes": "Important infrastructure layer behind many “Sign in with ChatGPT” agent integrations.",
+      "last_verified": "2026-06-02"
+    },
+    {
+      "name": "Codex IDE integrations",
+      "slug": "codex-ide-integrations",
+      "category": "official-platform",
+      "status": "official",
+      "auth": [
+        "Sign in with ChatGPT",
+        "OpenAI API key",
+        "JetBrains AI subscription where supported"
+      ],
+      "subscription_auth_support": "OpenAI documents ChatGPT sign-in for Codex IDE integrations.",
+      "description": "Official Codex integrations for supported IDEs and editor workflows.",
+      "url": "https://developers.openai.com/codex/ide",
+      "docs": [
+        "https://developers.openai.com/codex/ide"
+      ],
+      "notes": "Exact feature set varies by IDE and integration.",
+      "last_verified": "2026-06-02"
+    },
+    {
+      "name": "Codex GitHub integration",
+      "slug": "codex-github-integration",
+      "category": "official-platform",
+      "status": "official",
+      "auth": [
+        "ChatGPT/Codex account connection"
+      ],
+      "subscription_auth_support": "Codex can review code and work with GitHub repositories from the Codex product surface.",
+      "description": "Official Codex integration for GitHub code review and repository workflows.",
+      "url": "https://developers.openai.com/codex/integrations/github",
+      "docs": [
+        "https://developers.openai.com/codex/integrations/github"
+      ],
+      "notes": "Useful to include because many third-party tools are trying to replicate or extend this workflow.",
+      "last_verified": "2026-06-02"
+    },
+    {
+      "name": "Codex plugin for Claude Code",
+      "slug": "codex-plugin-cc",
+      "category": "official-platform",
+      "status": "official",
+      "auth": [
+        "Local Codex sign-in",
+        "ChatGPT subscription",
+        "OpenAI API key"
+      ],
+      "subscription_auth_support": "Delegates selected Claude Code work to local Codex, using the user’s existing Codex authentication.",
+      "description": "OpenAI plugin that lets Claude Code call Codex for reviews, delegation, and related workflows.",
+      "url": "https://github.com/openai/codex-plugin-cc",
+      "docs": [
+        "https://github.com/openai/codex-plugin-cc"
+      ],
+      "notes": "Requires Claude Code plus local Codex setup.",
+      "last_verified": "2026-06-02"
+    },
+    {
+      "name": "Xcode coding intelligence",
+      "slug": "xcode-codex",
+      "category": "editors-agents",
+      "status": "documented-third-party",
+      "auth": [
+        "Sign in with a ChatGPT account",
+        "OpenAI API key"
+      ],
+      "subscription_auth_support": "Apple documents Codex setup with ChatGPT account sign-in or API key.",
+      "description": "Apple Xcode coding intelligence and agent workflows with Codex support.",
+      "url": "https://developer.apple.com/documentation/Xcode/setting-up-coding-intelligence",
+      "docs": [
+        "https://developer.apple.com/documentation/Xcode/setting-up-coding-intelligence"
+      ],
+      "notes": "Requires supported Xcode versions and regional/account availability.",
+      "last_verified": "2026-06-02"
+    },
+    {
+      "name": "JetBrains IDEs / AI Assistant Codex",
+      "slug": "jetbrains-codex",
+      "category": "editors-agents",
+      "status": "documented-third-party",
+      "auth": [
+        "ChatGPT account",
+        "OpenAI API key",
+        "JetBrains AI subscription"
+      ],
+      "subscription_auth_support": "JetBrains documents Codex usage via ChatGPT account, OpenAI API key, or JetBrains AI subscription.",
+      "description": "Codex integration for IntelliJ IDEA, PyCharm, WebStorm, and other JetBrains IDEs.",
+      "url": "https://www.jetbrains.com/help/ai-assistant/codex-agent.html",
+      "docs": [
+        "https://blog.jetbrains.com/ai/2026/01/codex-in-jetbrains-ides/",
+        "https://www.jetbrains.com/help/ai-assistant/codex-agent.html"
+      ],
+      "notes": "Feature availability may differ between IDEs and JetBrains AI plans.",
+      "last_verified": "2026-06-02"
+    },
+    {
+      "name": "Zed",
+      "slug": "zed-chatgpt-subscription",
+      "category": "editors-agents",
+      "status": "documented-third-party",
+      "auth": [
+        "ChatGPT subscription",
+        "OpenAI API key"
+      ],
+      "subscription_auth_support": "Zed documents signing in with a ChatGPT account and running OpenAI models through Zed’s agent with Codex usage.",
+      "description": "Code editor with built-in agent workflows and ChatGPT subscription/Codex support.",
+      "url": "https://zed.dev/blog/chatgpt-subscription-in-zed",
+      "docs": [
+        "https://zed.dev/docs/ai/external-agents",
+        "https://github.com/zed-industries/codex-acp"
+      ],
+      "notes": "Remote-project support and billing behavior may differ from local projects.",
+      "last_verified": "2026-06-02"
+    },
+    {
+      "name": "OpenCode",
+      "slug": "opencode",
+      "category": "editors-agents",
+      "status": "documented-third-party",
+      "auth": [
+        "OpenAI login",
+        "ChatGPT Plus/Pro",
+        "OpenAI API key through providers"
+      ],
+      "subscription_auth_support": "OpenCode documents connecting OpenAI and selecting ChatGPT Plus/Pro.",
+      "description": "Open-source terminal coding agent with multiple model providers and OpenAI subscription login support.",
+      "url": "https://opencode.ai/",
+      "docs": [
+        "https://opencode.ai/docs/providers/"
+      ],
+      "notes": "Also has third-party Codex-auth plugins listed below.",
+      "last_verified": "2026-06-02"
+    },
+    {
+      "name": "Cline",
+      "slug": "cline-openai-codex-oauth",
+      "category": "editors-agents",
+      "status": "documented-third-party",
+      "auth": [
+        "OpenAI Codex OAuth",
+        "ChatGPT Plus/Pro",
+        "OpenAI API key through other providers"
+      ],
+      "subscription_auth_support": "Cline documents OpenAI Codex OAuth: sign in with OpenAI, no API key required, with model access depending on plan.",
+      "description": "VS Code AI coding assistant with OpenAI Codex OAuth support.",
+      "url": "https://cline.bot/",
+      "docs": [
+        "https://docs.cline.bot/provider-config/openai",
+        "https://cline.bot/blog/introducing-openai-codex-oauth"
+      ],
+      "notes": "Availability and model list can change with Cline and OpenAI plan updates.",
+      "last_verified": "2026-06-02"
+    },
+    {
+      "name": "Roo Code",
+      "slug": "roo-code-openai-chatgpt-plus-pro",
+      "category": "editors-agents",
+      "status": "documented-third-party",
+      "auth": [
+        "OpenAI - ChatGPT Plus/Pro OAuth"
+      ],
+      "subscription_auth_support": "Roo Code documents an OpenAI – ChatGPT Plus/Pro provider using OAuth, without an API key.",
+      "description": "Agentic coding extension with a ChatGPT Plus/Pro provider.",
+      "url": "https://roocode.com/",
+      "docs": [
+        "https://docs.roocode.com/providers/openai-chatgpt-plus-pro"
+      ],
+      "notes": "Use provider docs to confirm current model availability and plan requirements.",
+      "last_verified": "2026-06-02"
+    },
+    {
+      "name": "Kilo Code",
+      "slug": "kilo-code-openai-chatgpt-plus-pro",
+      "category": "editors-agents",
+      "status": "documented-third-party",
+      "auth": [
+        "OpenAI - ChatGPT Plus/Pro OAuth"
+      ],
+      "subscription_auth_support": "Kilo Code documents using a ChatGPT Plus/Pro subscription with OAuth and no separate API key.",
+      "description": "AI coding agent/extension with OpenAI ChatGPT Plus/Pro provider support.",
+      "url": "https://kilo.ai/",
+      "docs": [
+        "https://kilo.ai/docs/ai-providers/openai-chatgpt-plus-pro"
+      ],
+      "notes": "Docs note usage counts against subscription limits and that some Kilo products may not support this provider.",
+      "last_verified": "2026-06-02"
+    },
+    {
+      "name": "Pi",
+      "slug": "pi-coding-agent",
+      "category": "editors-agents",
+      "status": "documented-third-party",
+      "auth": [
+        "ChatGPT Plus/Pro (Codex)",
+        "Other subscription logins"
+      ],
+      "subscription_auth_support": "Pi documents ChatGPT Plus/Pro (Codex) as a login provider for its coding agent.",
+      "description": "Composable AI agent/coding-agent toolkit with subscription login providers.",
+      "url": "https://github.com/earendil-works/pi",
+      "docs": [
+        "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/docs/providers.md",
+        "https://pi.dev/news"
+      ],
+      "notes": "Stores local auth state; review docs before using on shared machines.",
+      "last_verified": "2026-06-02"
+    },
+    {
+      "name": "OpenClaw",
+      "slug": "openclaw",
+      "category": "editors-agents",
+      "status": "documented-third-party",
+      "auth": [
+        "OpenAI/Codex OAuth",
+        "ChatGPT subscription",
+        "OpenAI API key"
+      ],
+      "subscription_auth_support": "OpenClaw documents ChatGPT/Codex subscription setup through OpenAI Codex OAuth and the Codex app-server runtime.",
+      "description": "Local agentic automation interface that can use Codex-backed OpenAI models through subscription auth.",
+      "url": "https://openclaw.ai/",
+      "docs": [
+        "https://docs.openclaw.ai/providers/openai",
+        "https://openclaw.ai/blog/openai-models-in-openclaw-done-right/"
+      ],
+      "notes": "Docs distinguish between Codex OAuth/subscription auth and direct API-key mode.",
+      "last_verified": "2026-06-02"
+    },
+    {
+      "name": "Hermes Agent",
+      "slug": "hermes-agent",
+      "category": "editors-agents",
+      "status": "documented-third-party",
+      "auth": [
+        "OpenAI Codex provider",
+        "ChatGPT OAuth",
+        "Device-code auth"
+      ],
+      "subscription_auth_support": "Hermes documents OpenAI Codex provider support and running agent turns through a ChatGPT subscription with Codex app-server runtime.",
+      "description": "Terminal agent runtime with Codex provider and app-server integration.",
+      "url": "https://hermes-agent.nousresearch.com/",
+      "docs": [
+        "https://hermes-agent.nousresearch.com/docs/user-guide/features/codex-app-server-runtime",
+        "https://hermes-agent.nousresearch.com/docs/integrations/providers"
+      ],
+      "notes": "Useful for users who want Codex-style app-server behavior inside an extensible local agent.",
+      "last_verified": "2026-06-02"
+    },
+    {
+      "name": "Open CoDesign",
+      "slug": "open-codesign",
+      "category": "editors-agents",
+      "status": "experimental-adapter",
+      "auth": [
+        "ChatGPT Plus/Codex subscription login",
+        "OpenAI API key where supported"
+      ],
+      "subscription_auth_support": "Project releases describe ChatGPT Plus/Codex subscription login/OAuth support for using an existing subscription as model budget.",
+      "description": "Open-source AI design/coding workflow project with Codex subscription login mentions in releases.",
+      "url": "https://github.com/OpenCoworkAI/open-codesign",
+      "docs": [
+        "https://github.com/OpenCoworkAI/open-codesign/releases"
+      ],
+      "notes": "Verify current setup instructions before relying on it; support may be release-specific.",
+      "last_verified": "2026-06-02"
+    },
+    {
+      "name": "codex-discord",
+      "slug": "codex-discord",
+      "category": "remote-control",
+      "status": "experimental-adapter",
+      "auth": [
+        "Codex subscription",
+        "Local Codex account/session"
+      ],
+      "subscription_auth_support": "Project describes remote-controlling Codex through Discord with no API key needed and running on a Codex subscription.",
+      "description": "Discord-based remote control bridge for Codex sessions.",
+      "url": "https://github.com/chadingTV/codex-discord",
+      "docs": [
+        "https://github.com/chadingTV/codex-discord"
+      ],
+      "notes": "Be careful exposing coding-agent control over chat platforms; review permissions and command safeguards.",
+      "last_verified": "2026-06-02"
+    },
+    {
+      "name": "opencode-openai-codex-auth",
+      "slug": "opencode-openai-codex-auth",
+      "category": "plugins-adapters",
+      "status": "experimental-adapter",
+      "auth": [
+        "OpenAI OAuth",
+        "ChatGPT Plus/Pro"
+      ],
+      "subscription_auth_support": "Plugin describes OpenAI Codex access in OpenCode through ChatGPT OAuth instead of API keys.",
+      "description": "OpenCode plugin/provider for OpenAI Codex OAuth authentication.",
+      "url": "https://github.com/numman-ali/opencode-openai-codex-auth",
+      "docs": [
+        "https://github.com/numman-ali/opencode-openai-codex-auth"
+      ],
+      "notes": "Third-party adapter; review token storage and project activity.",
+      "last_verified": "2026-06-02"
+    },
+    {
+      "name": "@openhax/codex for OpenCode",
+      "slug": "openhax-codex-opencode",
+      "category": "plugins-adapters",
+      "status": "experimental-adapter",
+      "auth": [
+        "ChatGPT Plus/Pro OAuth"
+      ],
+      "subscription_auth_support": "Plugin describes enabling OpenCode to use OpenAI Codex through ChatGPT Plus/Pro OAuth.",
+      "description": "OpenCode plugin that routes OpenCode requests to Codex-backed OpenAI models.",
+      "url": "https://github.com/open-hax/codex",
+      "docs": [
+        "https://github.com/open-hax/codex"
+      ],
+      "notes": "Third-party adapter; verify compatibility with the current OpenCode provider API.",
+      "last_verified": "2026-06-02"
+    },
+    {
+      "name": "codex-acp",
+      "slug": "zed-codex-acp",
+      "category": "plugins-adapters",
+      "status": "documented-third-party",
+      "auth": [
+        "ChatGPT subscription",
+        "Codex API key",
+        "OpenAI API key"
+      ],
+      "subscription_auth_support": "Zed’s Codex ACP adapter documents ChatGPT subscription authentication for local use.",
+      "description": "Agent Client Protocol adapter for running Codex inside Zed and other ACP-compatible clients.",
+      "url": "https://github.com/zed-industries/codex-acp",
+      "docs": [
+        "https://github.com/zed-industries/codex-acp"
+      ],
+      "notes": "Docs note limitations around remote projects.",
+      "last_verified": "2026-06-02"
+    },
+    {
+      "name": "llm-openai-via-codex",
+      "slug": "llm-openai-via-codex",
+      "category": "plugins-adapters",
+      "status": "experimental-adapter",
+      "auth": [
+        "Local Codex CLI session",
+        "ChatGPT OAuth credentials"
+      ],
+      "subscription_auth_support": "LLM plugin that uses an installed/authenticated Codex CLI session to access Codex-available models.",
+      "description": "Simon Willison’s LLM plugin for accessing OpenAI models through local Codex auth.",
+      "url": "https://github.com/simonw/llm-openai-via-codex",
+      "docs": [
+        "https://simonwillison.net/2026/Apr/23/llm-openai-via-codex/"
+      ],
+      "notes": "Experimental and dependent on local Codex behavior; do not treat as a stable public API.",
+      "last_verified": "2026-06-02"
+    },
+    {
+      "name": "ai-sub-auth",
+      "slug": "ai-sub-auth",
+      "category": "plugins-adapters",
+      "status": "experimental-adapter",
+      "auth": [
+        "Subscription auth library",
+        "OpenAI Codex/ChatGPT subscription"
+      ],
+      "subscription_auth_support": "Library describes reusing AI subscriptions and includes OpenAI Codex/ChatGPT subscription auth.",
+      "description": "Developer library for subscription-auth integrations across AI providers.",
+      "url": "https://github.com/AlexAnys/ai-sub-auth",
+      "docs": [
+        "https://github.com/AlexAnys/ai-sub-auth"
+      ],
+      "notes": "Review security model carefully before embedding in apps.",
+      "last_verified": "2026-06-02"
+    },
+    {
+      "name": "pi-codex-search",
+      "slug": "pi-codex-search",
+      "category": "plugins-adapters",
+      "status": "experimental-adapter",
+      "auth": [
+        "ChatGPT Plus/Pro Codex subscription via Pi"
+      ],
+      "subscription_auth_support": "Pi package page describes reusing a ChatGPT Plus/Pro Codex subscription for web search in Pi agents.",
+      "description": "Pi extension that adds Codex-backed web search capabilities.",
+      "url": "https://pi.dev/packages/pi-codex-search",
+      "docs": [
+        "https://pi.dev/packages/pi-codex-search"
+      ],
+      "notes": "Requires Pi’s provider setup first.",
+      "last_verified": "2026-06-02"
+    },
+    {
+      "name": "@llblab/pi-codex-usage",
+      "slug": "pi-codex-usage",
+      "category": "plugins-adapters",
+      "status": "experimental-adapter",
+      "auth": [
+        "Pi Codex subscription login"
+      ],
+      "subscription_auth_support": "Pi package page describes summarizing Codex subscription usage inside Pi workflows.",
+      "description": "Pi utility extension for Codex usage tracking.",
+      "url": "https://pi.dev/packages/%40llblab/pi-codex-usage",
+      "docs": [
+        "https://pi.dev/packages/%40llblab/pi-codex-usage"
+      ],
+      "notes": "Utility rather than a full app; useful companion for subscription-auth users.",
+      "last_verified": "2026-06-02"
+    },
+    {
+      "name": "claude-gpt-image-bridge",
+      "slug": "claude-gpt-image-bridge",
+      "category": "plugins-adapters",
+      "status": "experimental-adapter",
+      "auth": [
+        "Codex CLI session",
+        "ChatGPT subscription"
+      ],
+      "subscription_auth_support": "Project describes using Codex CLI and a ChatGPT subscription to generate GPT images from Claude Code.",
+      "description": "Bridge for image generation workflows from Claude Code through Codex/ChatGPT subscription auth.",
+      "url": "https://github.com/oakplank/claude-gpt-image-bridge",
+      "docs": [
+        "https://github.com/oakplank/claude-gpt-image-bridge"
+      ],
+      "notes": "Experimental image bridge; check terms, model availability, and output rights.",
+      "last_verified": "2026-06-02"
+    },
+    {
+      "name": "chatgpt-imagegen",
+      "slug": "chatgpt-imagegen",
+      "category": "plugins-adapters",
+      "status": "experimental-adapter",
+      "auth": [
+        "ChatGPT subscription",
+        "Codex CLI auth"
+      ],
+      "subscription_auth_support": "Project describes generating images from the command line using a ChatGPT subscription and no API key.",
+      "description": "Command-line image generation tool that uses ChatGPT/Codex auth paths.",
+      "url": "https://github.com/leeguooooo/chatgpt-imagegen",
+      "docs": [
+        "https://github.com/leeguooooo/chatgpt-imagegen"
+      ],
+      "notes": "Project itself warns about undocumented/internal endpoints; treat as experimental.",
+      "last_verified": "2026-06-02"
+    },
+    {
+      "name": "ChatMock",
+      "slug": "chatmock",
+      "category": "proxies-api-shims",
+      "status": "experimental-proxy",
+      "auth": [
+        "ChatGPT account login",
+        "Local OpenAI-compatible API"
+      ],
+      "subscription_auth_support": "Project describes signing in with ChatGPT and serving an OpenAI-compatible API locally.",
+      "description": "Local OpenAI-compatible API server backed by ChatGPT subscription auth.",
+      "url": "https://github.com/RayBytes/ChatMock",
+      "docs": [
+        "https://github.com/RayBytes/ChatMock"
+      ],
+      "notes": "Proxy/API-shim tools are high-risk: review provider terms, token handling, and whether public serving is allowed.",
+      "last_verified": "2026-06-02"
+    },
+    {
+      "name": "GPTMock",
+      "slug": "gptmock",
+      "category": "proxies-api-shims",
+      "status": "experimental-proxy",
+      "auth": [
+        "ChatGPT account login",
+        "Local OpenAI-compatible API"
+      ],
+      "subscription_auth_support": "Fork/variant of ChatMock-style local API approach using ChatGPT subscription login.",
+      "description": "OpenAI-compatible local API shim backed by ChatGPT subscription auth.",
+      "url": "https://github.com/rapidrabbit76/GPTMock",
+      "docs": [
+        "https://github.com/rapidrabbit76/GPTMock"
+      ],
+      "notes": "Proxy/API-shim tools are high-risk; verify legality, terms, and security before use.",
+      "last_verified": "2026-06-02"
+    },
+    {
+      "name": "gptAnywhere",
+      "slug": "gptanywhere",
+      "category": "proxies-api-shims",
+      "status": "experimental-proxy",
+      "auth": [
+        "ChatGPT subscription"
+      ],
+      "subscription_auth_support": "Project describes programmatic access to OpenAI models through a ChatGPT subscription.",
+      "description": "Tooling for programmatic/local access paths backed by ChatGPT subscription auth.",
+      "url": "https://github.com/playcations/gptAnywhere",
+      "docs": [
+        "https://github.com/playcations/gptAnywhere"
+      ],
+      "notes": "Experimental proxy-style access path; confirm it does not rely on brittle or disallowed automation, token handling, or provider terms for your use case.",
+      "last_verified": "2026-06-02"
+    },
+    {
+      "name": "CCProxy API",
+      "slug": "ccproxy-api",
+      "category": "proxies-api-shims",
+      "status": "experimental-proxy",
+      "auth": [
+        "ChatGPT/OpenAI Codex OAuth",
+        "Other subscription providers"
+      ],
+      "subscription_auth_support": "Project describes a local reverse proxy with OpenAI Codex/ChatGPT backend support and OAuth for paid accounts.",
+      "description": "Unified local API proxy for coding-agent subscriptions and providers.",
+      "url": "https://github.com/CaddyGlow/ccproxy-api",
+      "docs": [
+        "https://github.com/CaddyGlow/ccproxy-api"
+      ],
+      "notes": "Good candidate for advanced local use; not a substitute for reviewing provider terms and security.",
+      "last_verified": "2026-06-02"
+    },
+    {
+      "name": "CLIProxyAPI",
+      "slug": "cliproxyapi",
+      "category": "proxies-api-shims",
+      "status": "experimental-proxy",
+      "auth": [
+        "CLI subscription auth",
+        "ChatGPT/Claude/Gemini-style OAuth providers"
+      ],
+      "subscription_auth_support": "Project describes wrapping CLI tools and using existing OAuth subscription auth for API-style access.",
+      "description": "Proxy that exposes local CLI agents/tools as API-like endpoints.",
+      "url": "https://github.com/router-for-me/CLIProxyAPI",
+      "docs": [
+        "https://github.com/router-for-me/CLIProxyAPI"
+      ],
+      "notes": "General-purpose CLI proxy; verify current OpenAI/Codex support before listing as fully supported.",
+      "last_verified": "2026-06-02"
+    },
+    {
+      "name": "Codex-LB",
+      "slug": "codex-lb",
+      "category": "proxies-api-shims",
+      "status": "high-risk",
+      "auth": [
+        "ChatGPT account pool",
+        "Local OpenAI-compatible proxy"
+      ],
+      "subscription_auth_support": "Project describes a load balancer/proxy for ChatGPT accounts.",
+      "description": "Load-balancer/proxy layer for multiple ChatGPT/Codex accounts.",
+      "url": "https://github.com/Soju06/codex-lb",
+      "docs": [
+        "https://github.com/Soju06/codex-lb"
+      ],
+      "notes": "Listed for visibility only. Account pooling, shared credentials, resale, or quota-bypass use may violate provider terms. Do not use for abuse or public resale.",
+      "last_verified": "2026-06-02"
+    }
+  ]
+}

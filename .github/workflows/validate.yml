@@ -1,0 +1,21 @@
+name: Validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Check Python syntax
+        run: python3 -m compileall scripts
+      - name: Validate project data
+        run: python3 scripts/validate_data.py
+      - name: Check generated README and catalog
+        run: python3 scripts/generate_outputs.py --check

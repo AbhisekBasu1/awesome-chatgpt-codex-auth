@@ -1,0 +1,44 @@
+name: Fix or remove a listing
+about: Report stale, inaccurate, unsafe, or misleading listings
+labels: [correction]
+body:
+  - type: input
+    id: project-name
+    attributes:
+      label: Project/listing name
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong?
+      description: Explain what changed or why the listing is inaccurate/unsafe.
+    validations:
+      required: true
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Impact
+      options:
+        - Broken evidence link
+        - Auth support changed
+        - Security or terms concern
+        - Incorrect category/status
+        - Project appears abandoned
+        - Remove listing
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Link to docs, issues, archived pages, changelogs, or screenshots if relevant.
+    validations:
+      required: false
+  - type: textarea
+    id: suggested-fix
+    attributes:
+      label: Suggested fix
+      description: If you know the right replacement wording, category, status, or evidence URL, include it here.
+    validations:
+      required: false

@@ -1,0 +1,78 @@
+name: Add a project
+about: Suggest a new app, agent, plugin, or service
+labels: [addition]
+body:
+  - type: input
+    id: project-name
+    attributes:
+      label: Project name
+      placeholder: OpenCode
+    validations:
+      required: true
+  - type: input
+    id: project-url
+    attributes:
+      label: Project URL
+      placeholder: https://github.com/example/project
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - official-platform
+        - editors-agents
+        - remote-control
+        - plugins-adapters
+        - proxies-api-shims
+    validations:
+      required: true
+  - type: dropdown
+    id: status
+    attributes:
+      label: Suggested status
+      options:
+        - official
+        - documented-third-party
+        - experimental-adapter
+        - experimental-proxy
+        - high-risk
+    validations:
+      required: true
+  - type: textarea
+    id: auth-method
+    attributes:
+      label: How does ChatGPT/Codex subscription auth work?
+      description: Be specific. Mention ChatGPT OAuth, Codex OAuth, local Codex sign-in, app-server auth, device-code auth, or another documented path.
+    validations:
+      required: true
+  - type: textarea
+    id: subscription-auth-support
+    attributes:
+      label: Suggested subscription_auth_support text
+      description: One concise sentence explaining the supported ChatGPT/Codex auth flow.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence links
+      description: Link to durable docs, README sections, release notes, or code proving subscription sign-in support. Search snippets are not enough.
+    validations:
+      required: true
+  - type: textarea
+    id: caveats
+    attributes:
+      label: Caveats / security notes
+      description: Mention if the project stores tokens, exposes a local proxy, relies on undocumented endpoints, or has plan limitations.
+    validations:
+      required: false
+  - type: input
+    id: last-verified
+    attributes:
+      label: Last verified date
+      description: Date you checked the evidence, in YYYY-MM-DD format.
+      placeholder: "2026-06-02"
+    validations:
+      required: true
