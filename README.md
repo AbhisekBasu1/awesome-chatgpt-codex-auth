@@ -2,15 +2,8 @@
 
 > A curated index of developer tools that authenticate through ChatGPT, Codex OAuth, Codex app-server auth, or a local Codex sign-in instead of requiring a separate OpenAI Platform API key.
 
-**Repository slug:** `awesome-chatgpt-codex-auth`
-**Projects:** 32
-**Data verified through:** 2026-06-02
-
-_Generated from [`data/projects.json`](data/projects.json). Edit the data file, then run `python3 scripts/generate_outputs.py`._
-
 ## Contents
 
-- [What counts](#what-counts)
 - [Legend](#legend)
 - [Summary](#summary)
 - [Projects](#projects)
@@ -19,22 +12,6 @@ _Generated from [`data/projects.json`](data/projects.json). Edit the data file, 
 - [Contributing](#contributing)
 - [Data and automation](#data-and-automation)
 - [Related searches](#related-searches)
-
-## What counts
-
-Included projects should meet all of these requirements:
-
-1. The project publicly documents a way to authenticate with a ChatGPT account, ChatGPT subscription, Codex OAuth, Codex app-server managed auth, or a local Codex sign-in.
-2. The project does not require a separate OpenAI Platform API key for its primary listed ChatGPT/Codex subscription-auth flow.
-3. The project is an app, editor integration, coding agent, plugin, local service, SDK, or adapter that a developer can actually install or use.
-4. The listing includes durable evidence: official docs, a README, release notes, or another public source that can be reviewed later.
-
-Not included:
-
-- Generic OpenAI API clients that only support `OPENAI_API_KEY`.
-- Account resellers, shared-account marketplaces, cheap Plus sellers, credential rentals, or quota-bypass services.
-- Tools that require users to paste browser cookies/session tokens without a clearly documented security model.
-- Scrapers or automation whose main purpose is bypassing product limits, access controls, or provider terms.
 
 ## Legend
 
@@ -150,6 +127,8 @@ When adding a project, include:
 ## Data and automation
 
 The source list lives in [`data/projects.json`](data/projects.json), and [`data/catalog.json`](data/catalog.json) is generated for downstream tooling. The schema lives in [`data/schema.json`](data/schema.json).
+
+Current project count: 32. Data verified through: 2026-06-02.
 
 Useful maintenance commands:
 
